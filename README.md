@@ -18,6 +18,22 @@ cp -r expert_manager/www/cgi-bin /var/www
 cp -r expert_manager/www/html /var/www
 ```
 
+## Some Basic configuration needs to be done
+* Firewall should be stopped
+```
+systemctl stop firewalld
+```
+* selinux should be in Permissive mode
+```
+setenforce 0
+```
+* Apache user should have sudo power entry in /etc/sudoers file
+```
+apache ALL NOPASSWD: ALL
+```
+
+
+
 ### Flask Should be installed
 
 ```
