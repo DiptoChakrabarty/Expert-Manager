@@ -1,0 +1,9 @@
+- hosts: slaves
+  tasks:
+    - file:
+        path: /client
+        state: directory
+    - copy:
+        src: "../hadoop/core-site.xml"
+        dest: "/etc/hadoop/core-site.xml"
+

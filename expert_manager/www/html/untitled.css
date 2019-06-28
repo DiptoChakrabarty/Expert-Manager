@@ -1,0 +1,524 @@
+body {
+  background: white !important;
+  background-color: #ffffff;
+  border-left: solid 15px #062259 !important; 
+  border-right: solid 15px #062259 !important;
+}
+
+html, body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+header, article, aside, nav, footer {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  text-align: justify !important;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.embed-doc{
+  width: 100%;
+  height: 500px;
+}
+
+/* Header */
+
+.collegeHeader {
+  min-height: 13vh;
+  text-align: center;
+}
+
+.collegeHeader #jecrcLogo {
+  height: 13vh;
+  width: auto;
+  float: left;
+  padding: 5px;
+}
+
+.collegeHeader #collegeName {
+  font-size: 4.5vmin;
+  padding-top: 10px;
+}
+
+.collegeHeader #collegeUni{
+  font-size: 3vmin;
+}
+
+.center-nav{
+  margin: auto !important;
+}
+
+.collegeHeader #collegeAdd{
+  font-size: 3vmin;
+  padding-left: calc(10vh + 5px);
+}
+
+@media screen and (max-width: 991px) {
+.collegeHeader #collegeUni, .collegeHeader #collegeAdd{
+  display: none;
+} 
+}
+
+.deptHeader {
+  color: white !important;
+  font-size: 4vmin !important;
+  text-align: center;
+  border-top: solid 1px white;
+  padding-top: 5px;
+}
+
+nav {
+  border-top: solid 1px white;
+}
+
+.nav-link {
+  color: white !important;
+  /* border-right: solid 1px white; */
+  padding-right: 1vw !important;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1210px) {
+ .nav-link {
+  font-size: 1.2vw !important;
+ } 
+}
+
+#icon {
+  position: absolute !important;
+  z-index: 1 !important;
+  top: 10vh !important;
+  right: 2%;
+  height: 33px;
+  width: 33px;
+  padding: 0;
+  display: none;
+  color: white;
+  background-color: #062259 !important;
+}
+
+.dropdown-item:hover {
+  background-color: #575956 !important;
+  color: white !important;
+}
+
+@media screen and (max-width: 991px) {
+  #icon {
+    display: block;
+  }
+  nav {
+    border: none;
+  }
+  #navbarSupportedContent {
+    overflow-y: scroll;
+    max-height: 250px;
+    padding-top: 20px;
+  }
+  .nav-link {
+    font-size: 16px !important;
+  }
+}
+
+/* --------------------------------- */
+
+/* Side Nav */
+
+.banner .sidebarContainer {
+  padding: 20px 0px 20px 20px;
+}
+
+.banner .sidebarContainer .sidebar {
+  height: 100% !important;
+}
+
+.sidebar {
+  -webkit-box-shadow: 2px 2px 5px grey;
+  box-shadow: 2px 2px 5px grey;
+  padding: 0px;
+}
+
+.sidebar a {
+  color: white !important;
+  font-size: 1vmax;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.dropdown-item {
+  color: black !important;
+}
+
+#sideNavHeader {
+  display: none;
+  position: absolute;
+  top: 10vh;
+  left: 2%;
+  height: 35px;
+  width: 35px;
+  z-index: 1;
+}
+
+nav.sidebar, .main {
+  -webkit-transition: margin 200ms ease-out;
+  transition: margin 200ms ease-out;
+}
+
+#sideNavIcon {
+  border: none;
+  border-radius: 5px;
+  width: 33px;
+  height: 33px;
+  color: white;
+  background-color: #062259;
+  margin-bottom: 10px;
+}
+
+/*small/medium side display*/
+
+@media screen and (max-width: 576px) {
+  .banner .sidebarContainer {
+    padding: 0 0 0 15px !important;
+  }
+  .sidebar {
+    padding: 15px;
+  }
+  .sidebar a {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #bs-sidebar-navbar-collapse-1 {
+    position: absolute;
+    top: 2vh;
+  }
+}
+
+@media screen and (max-width:1199px) {
+  .sidebar {
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 768px) {
+  /*Allow main to be next to Nav*/
+  .main {
+    position: absolute;
+    width: calc(100% - 40px);
+    /*keeps 100% minus nav size*/
+    margin-left: 40px;
+    float: right;
+  }
+  /*lets nav bar to be showed on mouseover*/
+  nav.sidebar:hover+.main {
+    margin-left: 200px;
+  }
+  /*Center Icons*/
+  nav.sidebar a {
+    padding-right: 13px;
+  }
+  nav.sidebar .navbar-collapse, nav.sidebar .contgeNainer-fluid {
+    /*allows nav box to use 100% width*/
+    padding: 0 0px 0 0px;
+  }
+  /* Move nav to full on mouse over*/
+  nav.sidebar:hover {
+    margin-left: 0px;
+  }
+  /*for hiden things when navbar hidden*/
+  .forAnimate {
+    opacity: 0;
+  }
+}
+
+/* .....NavBar: Fully showing nav bar..... */
+
+@media (min-width: 1330px) {
+  /*Allow main to be next to Nav*/
+  .main {
+    width: calc(100% - 200px);
+    /*keeps 100% minus nav size*/
+    margin-left: 200px;
+  }
+  /*Show all nav*/
+  nav.sidebar {
+    margin-left: 0px;
+    float: left;
+  }
+  /*Show hidden items on nav*/
+  nav.sidebar .forAnimate {
+    opacity: 1;
+  }
+}
+
+nav:hover .forAnimate {
+  opacity: 1;
+}
+
+section {
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 575px) {
+  #sideNavHeader {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  #sideNavIcon {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #bs-sidebar-navbar-collapse-1 {
+    max-height: 250px !important;
+    overflow-y: scroll;
+    padding-top: 10px;
+  }
+  .sidebar {
+    margin: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 2px !important;
+  }
+}
+
+/* ---------------------------- */
+
+/* Image Carousel and NavBar  */
+
+.banner {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-top: 0.5vh;
+}
+
+.banner .imageCarousel {
+  padding: 20px;
+  text-align: center;
+}
+
+.banner .imageCarousel .carousel-item img {
+  width: 70vw;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 2px 5px 5px grey;
+}
+
+@media screen and (max-width: 576px) {
+  .banner .imageCarousel .carousel-item img {
+    width: 87vw !important;
+  }
+}
+
+/* ----------------------------- */
+
+/* footer */
+
+.footer-container {
+  color: white;
+  padding-top: 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.site-footer {
+  background-color: #062259;
+}
+
+.footer-container li {
+  list-style-type: none;
+}
+
+.footer-container a {
+  color: white;
+}
+
+.footer-list {
+  padding-bottom: 18px;
+}
+
+.support-color {
+  color: white;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.footer-bottom-para {
+  text-align: center !important;;
+}
+
+.footer-bottom {
+  border-top: 1px solid white;
+  ;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.footer-icons {
+  padding: 10px;
+  font-size: 15px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-facebook:hover {
+  background: white;
+  color: blue;
+}
+
+.fa-twitter:hover {
+  color: #55ACEE;
+  background: white;
+}
+
+.fa-linkedin:hover {
+  color: #007bb5;
+  background: white;
+}
+
+.fa-google:hover {
+  color: #dd4b39;
+  background: white;
+}
+
+.fa-youtube:hover {
+  color: #bb0000;
+  background: white;
+}
+
+.fa-instagram:hover {
+  color: #125688;
+  background: white;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-bottom, .footer-bottom p {
+    text-align: center;
+  }
+  .footer-bottom p {
+    padding-top: 15px;
+  }
+}
+
+/* ----------------------------- */
+/*GENERAL ALIGNMENT FOR SECTION*/
+
+.section {
+  padding: 1%;
+  box-shadow: 2px 2px 5px grey, -2px 2px 5px gray;
+  margin-bottom: 3%;
+}
+
+.sectionHeading {
+  text-align: center;
+  background-color: #05173a;
+  width: 100%;
+  border-radius: 20px;
+  color: white;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-family: "times new roman";
+  font-size: 20px;
+}
+
+.sectionSubHeading {
+  color: #0e08ee;
+}
+
+.sectionContent {
+  font-family: "georgia";
+  font-size: 18px;
+  padding: 1%;
+}
+
+.sectionList {
+  margin-left: 3%;
+}
+
+.section p {
+  text-align: justify;
+}
+
+/*Faculty image*/
+
+.faculty-img{
+  width: 100px;
+  height: 100px;
+}
+/*-------------------------*/
+
+
+.overflow-y-scroll{
+  overflow-y: scroll;
+  max-height: 220px;
+}
+
+.h-section{
+  max-height: 550px;
+  overflow-y: scroll;
+}
+
+.topper{
+  width: 180px;
+  height: 180px;
+}
+
+.hod-image{
+  width: 300px;
+  height: 300px;
+}
+
+@media screen and (min-width: 765px;) and (max-width: 995px;) {
+  .hod-image{
+    width:  200px;
+    height: 200px;
+  }
+}

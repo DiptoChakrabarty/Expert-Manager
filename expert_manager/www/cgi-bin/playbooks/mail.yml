@@ -1,0 +1,12 @@
+- hosts: localhost
+  vars_files:
+    - data.yml
+  tasks:
+    - mail:
+        host: smtp.gmail.com  
+        port: 587
+        username: "{{mail_id_sender}}"
+        password: "{{password}}"
+        to: "Arpit<{{mail_id_receiver}}>"
+        subject: "{{subject}}"
+        body: "{{body}}"

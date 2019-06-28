@@ -1,0 +1,12 @@
+- hosts: slaves
+  tasks:
+    - file:
+        path: /data
+        state: directory
+    - copy:
+        src: "../hadoop/hdfs-site2.xml"
+        dest: "/etc/hadoop/hdfs-site.xml"
+    - copy:
+        src: "../hadoop/core-site.xml"
+        dest: "/etc/hadoop/core-site.xml"
+

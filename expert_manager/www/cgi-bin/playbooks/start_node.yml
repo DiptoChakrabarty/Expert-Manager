@@ -1,0 +1,7 @@
+- hosts: master
+  tasks:
+    - command: 'hadoop-daemon.sh start namenode'
+- hosts: slaves
+  tasks: 
+    - command: 'hadoop-daemon.sh start datanode'
+    

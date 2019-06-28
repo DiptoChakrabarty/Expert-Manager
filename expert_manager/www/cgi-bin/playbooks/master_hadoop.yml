@@ -1,0 +1,15 @@
+- hosts: master
+  tasks:
+    - file:
+        path: '/name'
+        state: directory
+
+      
+    - copy:
+        src: "../hadoop/hdfs-site.xml"
+        dest: "/etc/hadoop/hdfs-site.xml"
+    - copy:
+        src: "../hadoop/core-site.xml"
+        dest: "/etc/hadoop/core-site.xml"
+
+    - shell: "echo 'Y' | hadoop namenode -format"

@@ -1,0 +1,7 @@
+- hosts: localhost
+  - add_host: 
+     name: arpit
+     ansible_connection: docker
+    
+  - delegate_to: arpit
+    row: python 

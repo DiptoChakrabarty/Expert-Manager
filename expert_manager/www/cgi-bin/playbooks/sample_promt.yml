@@ -1,0 +1,4 @@
+- hosts: localhost
+  tasks:
+    - vars_prompt:
+        - name: X

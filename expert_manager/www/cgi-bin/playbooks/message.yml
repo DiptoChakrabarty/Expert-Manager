@@ -1,0 +1,12 @@
+- hosts: localhost
+  vars_files:
+    - pass.yml
+    - data.yml
+  tasks:
+    - twilio:
+         msg: "{{msg}}"
+         account_sid: "{{twilio_sid}}"
+         auth_token: "{{twilio_auth}}"
+         from_number: "+18577631845"
+         to_number: "{{number}}"
+      

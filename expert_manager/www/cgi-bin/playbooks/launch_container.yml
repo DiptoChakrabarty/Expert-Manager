@@ -1,0 +1,33 @@
+- hosts: docker
+  vars_files : 
+    - data.yml
+  tasks: 
+    - package:
+          name: docker-ce
+          state: present
+    - package:
+          name: python-pip
+          state: present
+
+    - service:
+          name: docker
+          state: started
+          enabled: yes
+    - pip:
+          name: docker-py
+          state: present
+    - name: "installing docker container"
+      docker_container: 
+          name: "{{docker_name}}"
+          image: "vlc:v1"
+          
+          volumes: 
+            -  "/run/media/root/RHEL-7.5\ Server.x86_64:/dvd"
+            -  "/tmp/.X11-unix:/tmp/.X11-unix"
+          devices:
+            - /dev/snd
+          state: started
+          interactive: yes
+          tty: yes
+
+

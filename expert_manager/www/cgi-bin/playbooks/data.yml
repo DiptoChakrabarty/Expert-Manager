@@ -1,0 +1,9 @@
+mail_id_sender: Arpit Jain
+password: 'None'
+mail_id_receiver: 'None'
+subject: 'None'
+body: 'None'
+e20@jecrc.ac.in'
+subject: 'hii'
+body: 'this is send using python-cgi'
+

@@ -1,0 +1,8 @@
+- hosts: yum
+  tasks:
+    - name: yum configuration
+      yum_repository:
+        name: epel
+        description: EPEL YUM REPO
+        baseurl: "http://mirror.centos.org/centos/7/os/x86_64/"
+        gpgcheck: no
