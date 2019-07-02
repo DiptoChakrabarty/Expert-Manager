@@ -68,7 +68,7 @@ try:
 
 	for i in range(len(confidence_models)):		
 		if confidence_models[i] > 85:
-		    print("location: http://192.168.43.217/index2.html")
+		    print("location: http://192.168.43.217/index.html")
 		    print()
 		               
 
